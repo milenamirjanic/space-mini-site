@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+html,
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+a,
+a:hover{
+    text-decoration: none;
+}
+
+button{
+    border: none;
+    outline: none;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: 700;
+}
+h1{
+    font-size: 40px;
+}
+h2{
+    font-size: 36px;
+}
+h3{
+    font-size: 32px;
+}
+h4{
+    font-size: 28px;
+}
+h5{
+    font-size: 24px;
+}
+h6{
+    font-size: 20px;
+}
+p{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+body{
+    font-family: 'Rajdhani', sans-serif;
+}
+
+/* Varijable */
+
+// boje
+$white : #fff;
+$dark : #010510;
+$likeGray : #c7ced1;
+
+//mere 
+$marginsMain : 40px;
+$paddTop : 60px;
+
+$height1 : 700px - $paddTop;
+
+/* Mixins */
+
+@mixin flex($jc){
+    display: flex;
+    justify-content: $jc;
+    align-items: center;
+}
+
+@mixin textMix1() {         
+    letter-spacing: 3px;
+    word-spacing: 6px;
+    text-align: center;
+}
+
+@mixin mainEl($h : $height1) {
+    background: $dark;
+    color: $white;
+    padding-top: $paddTop;
+    height: $h;
+}
+
+.navigation{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: $dark;
+    color: $white;
+    min-height: 70px;
+    border-bottom: 1px solid darken($white,80%);
+    @include flex(space-between);
+
+    h1 {
+        text-transform: uppercase;
+        margin-left: $marginsMain;
+    }
+
+    ul {
+        list-style: none;
+        @include flex(space-between);
+
+        li {
+            margin-right: $marginsMain;
+            @include textMix1();
+            .navigation-links{
+                transition: all .2s;
+                color: lighten($likeGray, 25%);
+                font-size: 20px;
+
+                
+                &:link, &:visited {
+                    @extend .navigation-links ;
+                }
+
+                &:hover{
+                    color: lighten($likeGray, 15%);
+                }
+
+                &:active{
+                    color: lighten($likeGray, 5%);
+                }
+            }
+        }
+    }
+}
+
+
+
+@keyframes shrink {
+    0% {
+      background-size: 100%;
+    }
+    100% {
+      background-size: 120%;
+    }
+}
+
+.header {
+    @include  mainEl();
+    padding: 0;
+    background-image: url(https://i.ibb.co/4TGt3xW/space.jpg);
+    background-size: 100%;
+    background-position: center center;
+    animation: shrink 5s infinite alternate-reverse;
+
+    &-box {
+        height: 100%;
+        background-color: rgba(0,0,0,.7);
+        @include flex(center);
+
+        > div {
+            color: $white;
+
+            h1 {
+                font-size: 80px;
+                text-align: center;
+            }
+
+            h2 {
+                font-size: 40px;
+            }
+        }
+    }
+}
+
+main {
+    @include mainEl();
+    > * {
+        margin: 0 $marginsMain;
+    }
+
+    h1 {
+        margin-bottom: 50px;
+    }
+
+    p{
+        margin-bottom: 15px;
+
+        &:nth-of-type(3) { 
+            margin-bottom: 50px;
+        }
+    }
+}
+
+footer {
+    @include mainEl(150px);
+    border-top: 1px solid darken($white,90%);
+    padding: $paddTop;
+    p {
+        margin-right: 0;
+        @include textMix1();
+    }
+}

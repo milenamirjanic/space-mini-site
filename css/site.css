@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap");
+/* line 3, ../../Documents/KAMPSTER KURS WEB PROGRAMIRANJE/5. SASS/10. Zadatak - #68/RAD/sass/site.scss */
+html,
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 17, ../../Documents/KAMPSTER KURS WEB PROGRAMIRANJE/5. SASS/10. Zadatak - #68/RAD/sass/site.scss */
+a,
+a:hover {
+  text-decoration: none;
+}
+
+/* line 22, ../../Documents/KAMPSTER KURS WEB PROGRAMIRANJE/5. SASS/10. Zadatak - #68/RAD/sass/site.scss */
+button {
+  border: none;
+  outline: none;
+}
+
+/* line 27, ../../Documents/KAMPSTER KURS WEB PROGRAMIRANJE/5. SASS/10. Zadatak - #68/RAD/sass/site.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+/* line 30, ../../Documents/KAMPSTER KURS WEB PROGRAMIRANJE/5. SASS/10. Zadatak - #68/RAD/sass/site.scss */
+h1 {
+  font-size: 40px;
+}
+
+/* line 33, ../../Documents/KAMPSTER KURS WEB PROGRAMIRANJE/5. SASS/10. Zadatak - #68/RAD/sass/site.scss */
+h2 {
+  font-size: 36px;
+}
+
+/* line 36, ../../Documents/KAMPSTER KURS WEB PROGRAMIRANJE/5. SASS/10. Zadatak - #68/RAD/sass/site.scss */
+h3 {
+  font-size: 32px;
+}
+
+/* line 39, ../../Documents/KAMPSTER KURS WEB PROGRAMIRANJE/5. SASS/10. Zadatak - #68/RAD/sass/site.scss */
+h4 {
+  font-size: 28px;
+}
+
+/* line 42, ../../Documents/KAMPSTER KURS WEB PROGRAMIRANJE/5. SASS/10. Zadatak - #68/RAD/sass/site.scss */
+h5 {
+  font-size: 24px;
+}
+
+/* line 45, ../../Documents/KAMPSTER KURS WEB PROGRAMIRANJE/5. SASS/10. Zadatak - #68/RAD/sass/site.scss */
+h6 {
+  font-size: 20px;
+}
+
+/* line 48, ../../Documents/KAMPSTER KURS WEB PROGRAMIRANJE/5. SASS/10. Zadatak - #68/RAD/sass/site.scss */
+p {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* line 53, ../../Documents/KAMPSTER KURS WEB PROGRAMIRANJE/5. SASS/10. Zadatak - #68/RAD/sass/site.scss */
+body {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+/* Varijable */
+/* Mixins */
+/* line 91, ../../Documents/KAMPSTER KURS WEB PROGRAMIRANJE/5. SASS/10. Zadatak - #68/RAD/sass/site.scss */
+.navigation {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: #010510;
+  color: #fff;
+  min-height: 70px;
+  border-bottom: 1px solid #333333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* line 103, ../../Documents/KAMPSTER KURS WEB PROGRAMIRANJE/5. SASS/10. Zadatak - #68/RAD/sass/site.scss */
+.navigation h1 {
+  text-transform: uppercase;
+  margin-left: 40px;
+}
+
+/* line 108, ../../Documents/KAMPSTER KURS WEB PROGRAMIRANJE/5. SASS/10. Zadatak - #68/RAD/sass/site.scss */
+.navigation ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* line 112, ../../Documents/KAMPSTER KURS WEB PROGRAMIRANJE/5. SASS/10. Zadatak - #68/RAD/sass/site.scss */
+.navigation ul li {
+  margin-right: 40px;
+  letter-spacing: 3px;
+  word-spacing: 6px;
+  text-align: center;
+}
+
+/* line 115, ../../Documents/KAMPSTER KURS WEB PROGRAMIRANJE/5. SASS/10. Zadatak - #68/RAD/sass/site.scss */
+.navigation ul li .navigation-links, .navigation ul li .navigation-links:link, .navigation ul li .navigation-links:visited {
+  transition: all .2s;
+  color: white;
+  font-size: 20px;
+}
+
+/* line 125, ../../Documents/KAMPSTER KURS WEB PROGRAMIRANJE/5. SASS/10. Zadatak - #68/RAD/sass/site.scss */
+.navigation ul li .navigation-links:hover {
+  color: #f1f3f4;
+}
+
+/* line 129, ../../Documents/KAMPSTER KURS WEB PROGRAMIRANJE/5. SASS/10. Zadatak - #68/RAD/sass/site.scss */
+.navigation ul li .navigation-links:active {
+  color: #d5dadd;
+}
+
+@keyframes shrink {
+  0% {
+    background-size: 100%;
+  }
+  100% {
+    background-size: 120%;
+  }
+}
+
+/* line 148, ../../Documents/KAMPSTER KURS WEB PROGRAMIRANJE/5. SASS/10. Zadatak - #68/RAD/sass/site.scss */
+.header {
+  background: #010510;
+  color: #fff;
+  padding-top: 60px;
+  height: 640px;
+  padding: 0;
+  background-image: url(https://i.ibb.co/4TGt3xW/space.jpg);
+  background-size: 100%;
+  background-position: center center;
+  animation: shrink 5s infinite alternate-reverse;
+}
+
+/* line 156, ../../Documents/KAMPSTER KURS WEB PROGRAMIRANJE/5. SASS/10. Zadatak - #68/RAD/sass/site.scss */
+.header-box {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 161, ../../Documents/KAMPSTER KURS WEB PROGRAMIRANJE/5. SASS/10. Zadatak - #68/RAD/sass/site.scss */
+.header-box > div {
+  color: #fff;
+}
+
+/* line 164, ../../Documents/KAMPSTER KURS WEB PROGRAMIRANJE/5. SASS/10. Zadatak - #68/RAD/sass/site.scss */
+.header-box > div h1 {
+  font-size: 80px;
+  text-align: center;
+}
+
+/* line 169, ../../Documents/KAMPSTER KURS WEB PROGRAMIRANJE/5. SASS/10. Zadatak - #68/RAD/sass/site.scss */
+.header-box > div h2 {
+  font-size: 40px;
+}
+
+/* line 176, ../../Documents/KAMPSTER KURS WEB PROGRAMIRANJE/5. SASS/10. Zadatak - #68/RAD/sass/site.scss */
+main {
+  background: #010510;
+  color: #fff;
+  padding-top: 60px;
+  height: 640px;
+}
+
+/* line 178, ../../Documents/KAMPSTER KURS WEB PROGRAMIRANJE/5. SASS/10. Zadatak - #68/RAD/sass/site.scss */
+main > * {
+  margin: 0 40px;
+}
+
+/* line 182, ../../Documents/KAMPSTER KURS WEB PROGRAMIRANJE/5. SASS/10. Zadatak - #68/RAD/sass/site.scss */
+main h1 {
+  margin-bottom: 50px;
+}
+
+/* line 186, ../../Documents/KAMPSTER KURS WEB PROGRAMIRANJE/5. SASS/10. Zadatak - #68/RAD/sass/site.scss */
+main p {
+  margin-bottom: 15px;
+}
+
+/* line 189, ../../Documents/KAMPSTER KURS WEB PROGRAMIRANJE/5. SASS/10. Zadatak - #68/RAD/sass/site.scss */
+main p:nth-of-type(3) {
+  margin-bottom: 50px;
+}
+
+/* line 195, ../../Documents/KAMPSTER KURS WEB PROGRAMIRANJE/5. SASS/10. Zadatak - #68/RAD/sass/site.scss */
+footer {
+  background: #010510;
+  color: #fff;
+  padding-top: 60px;
+  height: 150px;
+  border-top: 1px solid #1a1a1a;
+  padding: 60px;
+}
+
+/* line 199, ../../Documents/KAMPSTER KURS WEB PROGRAMIRANJE/5. SASS/10. Zadatak - #68/RAD/sass/site.scss */
+footer p {
+  margin-right: 0;
+  letter-spacing: 3px;
+  word-spacing: 6px;
+  text-align: center;
+}
+
+/*# sourceMappingURL=site.css.map */
